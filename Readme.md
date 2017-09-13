@@ -94,4 +94,14 @@ Type `git config --global user.name "<your name>"` omitting the angle brackets.
 
 Type `git commit -m "Fixed off-by-one error"`.
 
+#Submitting the lab
+
+Go to `class.mimir.io` in your web browser.
+
+Create an account, and follow the link to **Join a Course**.
+
+When prompted, enter access code `23fdaf3859`.
+
+You should now be able to upload `stats.cpp` to Mimir, and receive credit for the lab.
+
 
