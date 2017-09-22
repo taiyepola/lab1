@@ -1,0 +1,42 @@
+//Taofik Aiyepola
+
+#include <iostream>
+#include <cstdlib>
+#include <string>
+using namespace std;
+
+string revComp(string dna){ //A revComp function takes and reveses the string data
+    int len = dna.length(); //initialzing len to the length of the dna sequence
+
+    string sequence;  
+    for(int i = len ; i > 0; i--){  //looping backwards through the initial DNA string
+        if( dna[i-1]== ('A')){    //if the sequence that was entered was an A a T will be outputted
+            sequence.append("T");
+        }
+        else if(dna[i-1]==('C')){   //if the sequence that was entered was an C a G will be outputted
+            sequence.append("G");
+        }
+        else if(dna[i-1]==('G')){   //if the sequence that was entered was an G a C will be outputted
+            sequence.append("C");
+        }
+        else if(dna[i-1]==('T')){   //if the sequence that was entered was an T a A will be outputted
+            sequence.append("A");
+        }
+        else if (dna[i-1]==('N')){    
+            sequence.append("N");
+        }
+        else{
+          sequence = "";
+          break;
+        }
+    }
+    return sequence;    //returning the reverse compliment
+}
+int main(int argc,char*argv[]){
+		string x = argv[1]; 
+		if (argc != 2){ return 1; exit(EXIT_FAILURE);}  //if there is not two arguments given the program will exit
+    string dnasequence = revComp(x);  //string to be reversed
+    if(dnasequence == ""){return 1; exit(EXIT_FAILURE);}  //if the sequence is invalid the program will exit
+    cout << dnasequence << endl;    //output to the screen
+    return 0;
+}
